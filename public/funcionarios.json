@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "email": "admin1@example.com",
+      "funcao": "admin",
+      "senha": "senha123"
+    },
+    {
+      "id": 2,
+      "email": "user1@example.com",
+      "funcao": "user",
+      "senha": "senha456"
+    },
+    {
+      "id": 3,
+      "email": "admin2@example.com",
+      "funcao": "admin",
+      "senha": "senha789"
+    },
+    {
+      "id": 4,
+      "email": "user2@example.com",
+      "funcao": "user",
+      "senha": "senhaABC"
+    },
+    {
+      "id": 5,
+      "email": "admin3@example.com",
+      "funcao": "admin",
+      "senha": "senhaXYZ"
+    }
+  ]
+  

@@ -1,0 +1,155 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Espaço reservado para a logo */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #8B0000;
+    color: #fff;
+    position: relative;
+  }
+  
+  .logo {
+    width: 150px;
+    height: 50px;
+    background: url('/logo-placeholder.png') no-repeat center;
+    background-size: contain;
+  }
+  
+  .nav-button {
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 7px 18px;
+    font-weight: extralight;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .nav-button:hover {
+    background: #CFCFCF;
+    color: black;
+  }
+ 
+  /* Campo de busca e botão */
+  .search-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  
+  .search-container input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .search-container button {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .search-container button:hover {
+    background: #c82333;
+  }
+  
+  /* Lista de veículos */
+  .veiculos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .card {
+    display: flex;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+  }
+  
+  .card img {
+    width: 100px;
+    height: auto;
+    margin-right: 15px;
+  }
+  
+  .card-content {
+    flex: 1;
+  }
+  
+  .car-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .car-info {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .car-price {
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+  }
+  
+  /* Rodapé */
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #8B0000;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+  }
+  
+  .logout-button {
+    background: #8B0000;
+    color: white;
+    border: 1px solid white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .logout-button:hover {
+    background: white;
+    color: #8B0000;
+  }
+  

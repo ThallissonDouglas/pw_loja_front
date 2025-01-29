@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "nome": "Fiat Uno",
+    "valor": "R$ 25.000,00",
+    "chassi": "9BWZZZ377VT004251",
+    "ano_modelo": "2015/2016",
+    "km": "80.000",
+    "cor": "Branco",
+    "motor": "1.0",
+    "combustivel": "Flex",
+    "cambio": "Manual",
+    "imagem": "car1.png"
+  },
+  {
+    "id": 2,
+    "nome": "Chevrolet Onix",
+    "valor": "R$ 48.000,00",
+    "chassi": "8AGZZZ123VT567890",
+    "ano_modelo": "2020/2021",
+    "km": "30.000",
+    "cor": "Preto",
+    "motor": "1.4",
+    "combustivel": "Flex",
+    "cambio": "Automático",
+    "imagem": "car1.png"
+  },
+  {
+    "id": 3,
+    "nome": "Volkswagen Gol",
+    "valor": "R$ 35.000,00",
+    "chassi": "9BRZZZ567VT098123",
+    "ano_modelo": "2018/2019",
+    "km": "50.000",
+    "cor": "Vermelho",
+    "motor": "1.6",
+    "combustivel": "Flex",
+    "cambio": "Manual",
+    "imagem": "car1.png"
+  },
+  {
+    "id": 4,
+    "nome": "Ford Ka",
+    "valor": "R$ 32.000,00",
+    "chassi": "8AFZZZ876VT543210",
+    "ano_modelo": "2017/2018",
+    "km": "65.000",
+    "cor": "Prata",
+    "motor": "1.5",
+    "combustivel": "Flex",
+    "cambio": "Manual",
+    "imagem": "car1.png"
+  },
+  {
+    "id": 5,
+    "nome": "Toyota Corolla",
+    "valor": "R$ 95.000,00",
+    "chassi": "9BWZZZ123VT001234",
+    "ano_modelo": "2021/2022",
+    "km": "20.000",
+    "cor": "Cinza",
+    "motor": "2.0",
+    "combustivel": "Flex",
+    "cambio": "Automático",
+    "imagem": "car1.png"
+  },
+  {
+    "id": 6,
+    "nome": "Honda Civic",
+    "valor": "R$ 105.000,00",
+    "chassi": "8BRZZZ456VT789012",
+    "ano_modelo": "2022/2023",
+    "km": "10.000",
+    "cor": "Azul",
+    "motor": "2.0 Turbo",
+    "combustivel": "Gasolina",
+    "cambio": "Automático",
+    "imagem": "car1.png"
+  },
+  {
+    "id": 7,
+    "nome": "Renault Sandero",
+    "valor": "R$ 40.000,00",
+    "chassi": "9FRZZZ654VT321987",
+    "ano_modelo": "2019/2020",
+    "km": "45.000",
+    "cor": "Amarelo",
+    "motor": "1.6",
+    "combustivel": "Flex",
+    "cambio": "Manual",
+    "imagem": "car1.png"
+  }
+]
