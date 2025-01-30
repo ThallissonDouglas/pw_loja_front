@@ -17,7 +17,7 @@ export default function VeicList({ veiculos, usuario }) {
             </div>
 
             
-            <main className="veiculos-container">
+            <main className="flex flex-col items-center justify-start space-y-[30px]">
                 {veiculos.length > 0 ? (
                     veiculos.map((carro) => (
                         /* TODO: adicionar onClick para item de carro para ir para uma pagina veiculos/[chassi], e mostrar a pagina do carro */
@@ -36,46 +36,48 @@ export default function VeicList({ veiculos, usuario }) {
 
                         </div>
                         <div className="space-y-2">
-                        <div className="font-bold text-[24px] items-start flex flex-row justify-between ">
-                            <p className="">{carro.nome}</p>
-                            <p className="">{carro.valor}</p>
-                        </div>
-                        <hr className="border-b-[2px] border-[#AFAFAF] "/>
-                        <div className="flex flex-wrap justify-normal text-[20px] *:py-2">
-                            <div className="w-[14em]">
-                            <p className="font-light">Ano/Modelo:</p>
-                            <p className="font-bold" >{carro.ano_modelo}</p>
+                            <div className="font-bold text-[24px] items-start flex flex-row justify-between ">
+                                <p className="">{carro.nome}</p>
+                                <p className="">{carro.valor}</p>
                             </div>
-                            <div className="w-[14em]">
-                            <p className="font-light">N° do Chassi:</p>
-                            <p className="font-bold">{carro.chassi}</p>
+                            <hr className="border-b-[2px] border-[#AFAFAF] "/>
+                            <div className="flex flex-wrap justify-normal text-[20px] *:py-2">
+                                <div className="w-[14em]">
+                                    <p className="font-light">Ano/Modelo:</p>
+                                    <p className="font-bold" >{carro.ano_modelo}</p>
+                                </div>
+                                <div className="w-[14em]">
+                                    <p className="font-light">N° do Chassi:</p>
+                                    <p className="font-bold">{carro.chassi}</p>
+                                </div>
+                                <div className="w-[14em]">
+                                    <p className="font-light">KM:</p>
+                                    <p className="font-bold">{carro.km}</p>
+                                </div>
+                                <div className="w-[10em]"> 
+                                    <p className="font-light">Cor:</p>
+                                    <p className="font-bold">{carro.cor}</p>
+                                </div>
+                                <div className="w-[10em]">
+                                    <p className="font-light">Motor:</p>
+                                    <p className="font-bold">{carro.motor}</p>
+                                </div>
+                                <div className="w-[10em]">
+                                    <p className="font-light">Combustível:</p>
+                                    <p className="font-bold">{carro.combustivel}</p>
+                                </div>
+                                <div className="w-[10em]">
+                                    <p className="font-light">Câmbio:</p>
+                                    <p className="font-bold">{carro.cambio}</p>
+                                </div>
                             </div>
-                            <div className="w-[14em]">
-                            <p className="font-light">KM:</p>
-                            <p className="font-bold">{carro.km}</p>
-                            </div>
-                            <div className="w-[10em]"> 
-                            <p className="font-light">Cor:</p>
-                            <p className="font-bold">{carro.cor}</p>
-                            </div>
-                            <div className="w-[10em]">
-                            <p className="font-light">Motor:</p>
-                            <p className="font-bold">{carro.motor}</p>
-                            </div>
-                            <div className="w-[10em]">
-                            <p className="font-light">Combustível:</p>
-                            <p className="font-bold">{carro.combustivel}</p>
-                            </div>
-                            <div className="w-[10em]">
-                            <p className="font-light">Câmbio:</p>
-                            <p className="font-bold">{carro.cambio}</p>
-                            </div>
-                        </div>
                         </div>
                     </div>
                     ))
                 ) : (
-                    <p className="no-vehicles">Nenhum veículo disponível.</p>
+                    <div className='flex items-center justify-center w-full h-[50px] bg-white rounded-xl'>
+                        <p className="font-bold">Nenhum veículo disponível.</p>
+                    </div>
                 )}
             </main>
         </div>

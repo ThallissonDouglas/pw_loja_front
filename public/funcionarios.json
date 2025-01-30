@@ -1,31 +1,41 @@
 [
     {
       "id": 1,
+      "nome": "João",
       "email": "admin1@example.com",
+      "cpf": "123.456.789-00",
       "funcao": "admin",
       "senha": "senha123"
     },
     {
       "id": 2,
+      "nome": "Maria",
       "email": "user1@example.com",
+      "cpf": "987.654.321-00",
       "funcao": "user",
       "senha": "senha456"
     },
     {
       "id": 3,
+      "nome": "José",
       "email": "admin2@example.com",
+      "cpf": "456.789.123-00",
       "funcao": "admin",
       "senha": "senha789"
     },
     {
       "id": 4,
+      "nome": "Ana",
       "email": "user2@example.com",
+      "cpf": "321.654.987-00",
       "funcao": "user",
       "senha": "senhaABC"
     },
     {
       "id": 5,
+      "nome": "Carlos",
       "email": "admin3@example.com",
+      "cpf": "789.123.456-00",
       "funcao": "admin",
       "senha": "senhaXYZ"
     }

@@ -8,11 +8,28 @@ export default function Navbar({ usuario}) {
                 </div>
             </div>
             <nav className="flex flex-row items-center justify-center bg-gradient-to-b from-[#CE5A60] via-[#9A1C1F] to-[#721D1A]">
-                <button className="nav-button">Veículos</button>
+                <div className="*:">
+                </div>
+                {/* TODO: adicionar onClick para cada Botão */}
+                <button 
+                    className="bg-transparent text-white py-[7px] px-[18px] font-extralight text-[20px] duration-300 ease-in-out hover:bg-[#CFCFCF] hover:text-black"
+                    onClick={() => (window.location.href = "/dashboard/veiculos")}
+                >
+                    Veículos
+                </button>
                 {usuario === "gerente" && (
                 <>
-                    <button className="nav-button">Histórico</button>
-                    <button className="nav-button">Funcionários</button>
+                    <button 
+                        className="bg-transparent text-white py-[7px] px-[18px] font-extralight text-[20px] duration-300 ease-in-out hover:bg-[#CFCFCF] hover:text-black"
+                    >
+                        Histórico
+                    </button>
+                    <button 
+                        className="bg-transparent text-white py-[7px] px-[18px] font-extralight text-[20px] duration-300 ease-in-out hover:bg-[#CFCFCF] hover:text-black"
+                        onClick={() => (window.location.href = "/dashboard/funcionarios")}
+                    >
+                        Funcionários
+                    </button>
                 </>
                 )}
             </nav>

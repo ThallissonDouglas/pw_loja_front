@@ -2,6 +2,9 @@
 
 import { useState, useEffect } from "react";
 import "./styles.css";
+import FuncList from "./FuncList";
+import Footer from "../UI/Footer";
+import Navbar from "../UI/Navbar";
 
 export default function FuncionariosPage() {
   const [usuario, setUsuario] = useState(null);
@@ -23,56 +26,25 @@ export default function FuncionariosPage() {
   }, []);
 
   return (
-    <div className="container">
+    <div className="w-[100%] flex flex-col h-[100%] bg-[#3F3F3F]">
       {/* Cabeçalho */}
-      <header className="header">
-        <div className="logo">LIMA AUTOMÓVEIS</div>
-        <nav>
-          <button className="nav-button">Veículos</button>
-          <button className="nav-button">Histórico</button>
-          <button className="nav-button active">Funcionários</button>
-        </nav>
-      </header>
+      <Navbar usuario={usuario} />
 
-      {/* Lista de Funcionários */}
-      <main className="funcionarios-container">
-        <h2>Lista de Funcionários</h2>
-        <div className="lista-funcionarios">
-          {funcionarios.length > 0 ? (
-            funcionarios.map((funcionario) => (
-              <div key={funcionario.id} className="funcionario-card">
-                <p>
-                  <strong>Nome do Funcionário</strong>
-                </p>
-                <p>Email: {funcionario.email}</p>
-                <p>CPF: {funcionario.cpf}</p>
-                <p>
-                  Função:{" "}
-                  {funcionario.funcao === "admin" ? "Funcionário" : "Gerente"}
-                </p>
-              </div>
-            ))
-          ) : (
-            <p className="no-funcionarios">Nenhum funcionário disponível.</p>
-          )}
-        </div>
-      </main>
+      {/* Campo de busca e botão de adicionar veículo */}
+      <div className="w-3/4 justify-center mx-auto px-[50px] pt-[35px] pb-[80px] bg-[#F1F1F1] space-y-10">
+        
+        {/* Título da página / Breadcrumbs [TODO!!!] */}
+        <h1 className="text-[25px] font-light text-gray-700 mt-[-5px] mb-[-15px]">Funcionários</h1> {/* Placeholder */}
 
-      {/* Rodapé */}
-      <footer className="footer">
-        <div className="user-info">
-          <p className="user-role">
-            {usuario === "gerente" ? "Nome do Gerente" : "Nome do Funcionário"}
-          </p>
-          <p className="user-id">ID: 12345</p>
-        </div>
-        <button
-          className="logout-button"
-          onClick={() => (window.location.href = "/auth/login")}
-        >
-          Deslogar
-        </button>
-      </footer>
+        <hr className="border-2 border-[#AFAFAF]"/>
+        
+        {/* Lista de Funcionários */}
+        <FuncList funcionarios={funcionarios} />
+      </div>
+      
+
+      {/* Rodapé com informações do usuário */}
+      <Footer usuario={usuario} />
     </div>
   );
 }
