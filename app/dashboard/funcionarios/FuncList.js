@@ -31,8 +31,8 @@ export default function FuncList({funcionarios}) {
                         </div>
                     ))
                 ) : (
-                    <div className='flex items-center justify-center w-full h-[50px] bg-white rounded-xl'>
-                        <p className="font-bold">Nenhum funcionário disponível.</p>
+                    <div className='flex items-center justify-center w-full h-screen bg-white rounded-xl'>
+                        <p className="font-bold text-[20px] text-gray-700">Nenhum funcionário disponível.</p>
                     </div>
                 )}
         </main>

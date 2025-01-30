@@ -5,6 +5,7 @@ import "./styles.css";
 import FuncList from "./FuncList";
 import Footer from "../UI/Footer";
 import Navbar from "../UI/Navbar";
+import { redirect } from "next/navigation";
 
 export default function FuncionariosPage() {
   const [usuario, setUsuario] = useState(null);
@@ -14,6 +15,10 @@ export default function FuncionariosPage() {
     // Simulando autenticação (Funcionário ou Gerente)
     const tipoUsuario = localStorage.getItem("tipoUsuario");
     setUsuario(tipoUsuario);
+
+    if (tipoUsuario !== "gerente") {
+      redirect("/dashboard/veiculos"); // Redireciona quem não é gerente para a tela de veículos
+    }
 
     // Carregando os funcionários do arquivo JSON
     fetch("/funcionarios.json")
@@ -25,10 +30,16 @@ export default function FuncionariosPage() {
       .catch((error) => console.error("Erro ao carregar funcionários:", error));
   }, []);
 
+
+  if (usuario !== "gerente") {
+    return null; // Não renderiza nada se não for gerente
+  }
+  
   return (
     <div className="w-[100%] flex flex-col h-[100%] bg-[#3F3F3F]">
       {/* Cabeçalho */}
       <Navbar usuario={usuario} />
+
 
       {/* Campo de busca e botão de adicionar veículo */}
       <div className="w-3/4 justify-center mx-auto px-[50px] pt-[35px] pb-[80px] bg-[#F1F1F1] space-y-10">

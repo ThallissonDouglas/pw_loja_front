@@ -21,6 +21,7 @@ export default function Navbar({ usuario}) {
                 <>
                     <button 
                         className="bg-transparent text-white py-[7px] px-[18px] font-extralight text-[20px] duration-300 ease-in-out hover:bg-[#CFCFCF] hover:text-black"
+                        onClick={() => (window.location.href = "/dashboard/historico")}
                     >
                         Histórico
                     </button>

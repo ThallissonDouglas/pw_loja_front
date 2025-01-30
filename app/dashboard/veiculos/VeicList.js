@@ -75,8 +75,8 @@ export default function VeicList({ veiculos, usuario }) {
                     </div>
                     ))
                 ) : (
-                    <div className='flex items-center justify-center w-full h-[50px] bg-white rounded-xl'>
-                        <p className="font-bold">Nenhum veículo disponível.</p>
+                    <div className='flex items-center justify-center w-full h-screen bg-white rounded-xl'>
+                        <p className="font-bold text-[20px] text-gray-700">Nenhum veículo disponível.</p>
                     </div>
                 )}
             </main>
