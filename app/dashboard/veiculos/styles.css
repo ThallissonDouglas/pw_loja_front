@@ -1,5 +1,5 @@
 /* Reset básico */
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -22,10 +22,10 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
+  } */
   
   /* Espaço reservado para a logo */
-  .header {
+  /* .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,10 +56,10 @@
   .nav-button:hover {
     background: #CFCFCF;
     color: black;
-  }
+  } */
  
   /* Campo de busca e botão */
-  .search-container {
+  /* .search-container {
     display: flex;
     justify-content: space-between;
     margin: 20px 0;
@@ -83,10 +83,10 @@
   
   .search-container button:hover {
     background: #c82333;
-  }
+  } */
   
   /* Lista de veículos */
-  .veiculos-container {
+  /* .veiculos-container {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -125,10 +125,10 @@
     font-weight: bold;
     font-size: 16px;
     color: #000;
-  }
+  } */
   
   /* Rodapé */
-  .footer {
+  /* .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -151,5 +151,5 @@
   .logout-button:hover {
     background: white;
     color: #8B0000;
-  }
+  } */
   

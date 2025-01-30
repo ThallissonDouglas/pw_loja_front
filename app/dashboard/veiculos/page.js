@@ -26,7 +26,7 @@ export default function VeiculosPage() {
   }, []);
 
   return (
-    <div className="w-[100%] flex flex-col h-[100%] bg-[#3F3F3F]">
+    <div className="w-[100%] flex flex-col h-[100%] bg-[#3F3F3F] text-gray-900">
       {/* Cabeçalho com espaço reservado para a logo */}
       <Navbar usuario={usuario} />
 

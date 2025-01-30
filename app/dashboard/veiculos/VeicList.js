@@ -7,7 +7,7 @@ export default function VeicList({ veiculos, usuario }) {
   const router = useRouter(); // Hook de navegação
 
   return (
-    <div className="justify-center space-y-10">
+    <div className="justify-center space-y-10 ">
       <div className="flex flex-row items-center justify-start space-x-4">
         <div className="bg-white flex flex-row items-center justify-center space-x-4 grow py-1 px-2 border-[3px] border-[#AFAFAF] rounded-xl">
           <Image
@@ -35,7 +35,7 @@ export default function VeicList({ veiculos, usuario }) {
             <div
               key={carro.id}
               className="flex flex-row items-center justify-start space-x-5 py-3 pr-4 bg-white rounded-xl hover:bg-[#F9F9F9] hover:cursor-pointer"
-              onClick={() => router.push(`/veiculos/${carro.chassi}`)} // Redirecionamento
+              onClick={() => router.push(`/dashboard/veiculos/${carro.chassi}`)} // Redirecionamento
             >
               <div className="overflow-hidden flex items-center justify-center">
                 <Image
