@@ -1,4 +1,8 @@
+import { useRouter } from "next/navigation"
+
 export default function Navbar({ usuario}) {
+    const router = useRouter();
+
     return (
         <header className="text-white  text-1xl ">
             <div className="flex flex-col items-start justify-start pl-9 pb-4 bg- bg-[url('../public/images/banner_automotivo.png')] bg-center">
@@ -13,7 +17,7 @@ export default function Navbar({ usuario}) {
                 {/* TODO: adicionar onClick para cada Botão */}
                 <button 
                     className="bg-transparent text-white py-[7px] px-[18px] font-extralight text-[20px] duration-300 ease-in-out hover:bg-[#CFCFCF] hover:text-black"
-                    onClick={() => (window.location.href = "/dashboard/veiculos")}
+                    onClick={() => (router.push("/dashboard/veiculos"))}
                 >
                     Veículos
                 </button>
@@ -21,13 +25,13 @@ export default function Navbar({ usuario}) {
                 <>
                     <button 
                         className="bg-transparent text-white py-[7px] px-[18px] font-extralight text-[20px] duration-300 ease-in-out hover:bg-[#CFCFCF] hover:text-black"
-                        onClick={() => (window.location.href = "/dashboard/historico")}
+                        onClick={() => (router.push("/dashboard/historico"))}
                     >
                         Histórico
                     </button>
                     <button 
                         className="bg-transparent text-white py-[7px] px-[18px] font-extralight text-[20px] duration-300 ease-in-out hover:bg-[#CFCFCF] hover:text-black"
-                        onClick={() => (window.location.href = "/dashboard/funcionarios")}
+                        onClick={() => (router.push("/dashboard/funcionarios"))}
                     >
                         Funcionários
                     </button>

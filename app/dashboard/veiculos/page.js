@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import "./styles.css";
 import Navbar from "../UI/Navbar";
 import Footer from "../UI/Footer";
@@ -32,7 +31,7 @@ export default function VeiculosPage() {
       <Navbar usuario={usuario} />
 
       {/* Campo de busca e botão de adicionar veículo */}
-      <div className="w-3/4 justify-center mx-auto px-[50px] pt-[35px] pb-[80px] bg-[#F1F1F1] space-y-10">
+      <div className="w-3/4 justify-center mx-auto px-[50px] pt-[35px] pb-[120px] bg-[#F1F1F1] space-y-10">
         
         {/* Título da página / Breadcrumbs [TODO!!!] */}
         <h1 className="text-[25px] font-light text-gray-700 mt-[-5px] mb-[-15px]">Veículos</h1> {/* Placeholder */}

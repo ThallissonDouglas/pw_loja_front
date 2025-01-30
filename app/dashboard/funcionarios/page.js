@@ -5,11 +5,12 @@ import "./styles.css";
 import FuncList from "./FuncList";
 import Footer from "../UI/Footer";
 import Navbar from "../UI/Navbar";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 export default function FuncionariosPage() {
   const [usuario, setUsuario] = useState(null);
   const [funcionarios, setFuncionarios] = useState([]);
+  const router = useRouter();
 
   useEffect(() => {
     // Simulando autenticação (Funcionário ou Gerente)
@@ -17,7 +18,7 @@ export default function FuncionariosPage() {
     setUsuario(tipoUsuario);
 
     if (tipoUsuario !== "gerente") {
-      redirect("/dashboard/veiculos"); // Redireciona quem não é gerente para a tela de veículos
+      router.push("/dashboard/veiculos"); // Redireciona quem não é gerente para a tela de veículos
     }
 
     // Carregando os funcionários do arquivo JSON
@@ -28,7 +29,7 @@ export default function FuncionariosPage() {
         setFuncionarios(data);
       })
       .catch((error) => console.error("Erro ao carregar funcionários:", error));
-  }, []);
+  }, [router]);
 
 
   if (usuario !== "gerente") {
@@ -42,7 +43,7 @@ export default function FuncionariosPage() {
 
 
       {/* Campo de busca e botão de adicionar veículo */}
-      <div className="w-3/4 justify-center mx-auto px-[50px] pt-[35px] pb-[80px] bg-[#F1F1F1] space-y-10">
+      <div className="w-3/4 justify-center mx-auto px-[50px] pt-[35px] pb-[120px] bg-[#F1F1F1] space-y-10">
         
         {/* Título da página / Breadcrumbs [TODO!!!] */}
         <h1 className="text-[25px] font-light text-gray-700 mt-[-5px] mb-[-15px]">Funcionários</h1> {/* Placeholder */}

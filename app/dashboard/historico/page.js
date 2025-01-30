@@ -4,11 +4,12 @@ import { useState, useEffect } from "react";
 import Navbar from "../UI/Navbar";
 import Footer from "../UI/Footer";
 import HistList from "./HistList";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 export default function HistoricoPage() {
     const [usuario, setUsuario] = useState(null);
     const [historico, setHistorico] = useState([]);
+    const router = useRouter();
 
     useEffect(() => {       
         // Simulando autenticação (Funcionário ou Gerente)
@@ -16,7 +17,7 @@ export default function HistoricoPage() {
         setUsuario(tipoUsuario);
         
         if (tipoUsuario !== "gerente") {
-            redirect("/dashboard/veiculos"); // Redireciona quem não é gerente para a tela de veículos
+            router.push("/dashboard/veiculos"); // Redireciona quem não é gerente para a tela de veículos
         }
 
         // Carregando o histórico do arquivo JSON
@@ -27,7 +28,7 @@ export default function HistoricoPage() {
                 setHistorico(data);
             })
             .catch((error) => console.error("Erro ao carregar histórico:", error));
-    }, []);
+    }, [router]);
     
 
     if (usuario !== 'gerente') {
@@ -41,7 +42,7 @@ export default function HistoricoPage() {
 
 
             {/* Campo de busca e botão de adicionar veículo */}
-            <div className="w-3/4 justify-center mx-auto px-[50px] pt-[35px] pb-[80px] bg-[#F1F1F1] space-y-10">
+            <div className="w-3/4 justify-center mx-auto px-[50px] pt-[35px] pb-[120px] bg-[#F1F1F1] space-y-10">
                 
                 {/* Título da página / Breadcrumbs [TODO!!!] */}
                 <h1 className="text-[25px] font-light text-gray-700 mt-[-5px] mb-[-15px]">Histórico</h1> {/* Placeholder */}
