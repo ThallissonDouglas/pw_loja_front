@@ -42,6 +42,12 @@ export default function CarroDetalhePage({ params }) {
     fetchVeiculo();
   }, [unwrappedParams.chassiCarro]); // Add unwrappedParams.chassiCarro as a dependency
 
+  const handleDelete = (e) => {
+    e.preventDefault();
+    router.push('/dashboard/veiculos');
+  }
+
+
   return (
     <div className="w-[100%] flex flex-col h-[100%] bg-[#3F3F3F] text-gray-900">
       <Navbar usuario={usuario} />
@@ -64,11 +70,10 @@ export default function CarroDetalhePage({ params }) {
                                 hover:bg-[#D9D9D9] hover:text-[#9A1C1F] hover:stroke-[#9A1C1F] ease-in-out transition-all duration-300"
                 onClick={() =>
                   router.push(
-                    `/dashboard/veiculos/${params.chassiCarro}/editar`
+                    `/dashboard/veiculos/${unwrappedParams.chassiCarro}/editar`
                   )
                 } // Adicionando onClick
               >
-                {/* Adicionar onClick pra edicao de dados */}
                 <svg className="w-[35px] h-auto fill-none" viewBox="0 0 26 26">
                   <path
                     d="M22.3818 9.25925L17.1031 3.93956M22.3818 9.25925L15.7854 15.9067C14.9161 16.7828 13.861 17.4743 12.6497 17.6848C11.4266 17.8975 9.90878 17.9683 9.18493 17.2388C8.4611 16.5093 8.53131 14.9797 8.74226 13.7471C8.95118 12.5263 9.63747 11.4631 10.5067 10.587L17.1031 3.93956M22.3818 9.25925C22.3818 9.25925 26.3408 5.26948 23.7014 2.60963C21.062 -0.0502118 17.1031 3.93956 17.1031 3.93956M24.4346 12.9997C24.4346 21.6442 21.7952 24.304 13.2173 24.304C4.63937 24.304 2 21.6442 2 12.9997C2 4.35516 4.63937 1.69531 13.2173 1.69531"
@@ -101,7 +106,8 @@ export default function CarroDetalhePage({ params }) {
                 </p>
                 <button
                   className="w-[100%] py-[15px] flex flex-row items-center justify-center space-x-4 bg-[#9A1C1F] text-white font-bold px-[10px] rounded-xl text-[35px]
-                                    hover:bg-[#D9D9D9] hover:text-[#9A1C1F] hover:stroke-[#9A1C1F] ease-in-out transition-all duration-300"
+                  hover:bg-[#D9D9D9] hover:text-[#9A1C1F] hover:stroke-[#9A1C1F] ease-in-out transition-all duration-300"
+                  onClick={() => {router.push('/dashboard/veiculos/conclusao')}}
                 >
                   <svg
                     className="w-[60px] h-auto fill-none "
@@ -160,7 +166,8 @@ export default function CarroDetalhePage({ params }) {
                 {usuario === "gerente" && (
                   <button
                     className="w-[100%] bg-[#9A1C1F] text-white font-bold px-[10px] py-[9px] rounded-xl text-[27px] flex flex-row justify-center items-center space-x-4
-                                hover:bg-[#D9D9D9] hover:text-[#9A1C1F] hover:stroke-[#9A1C1F] ease-in-out transition-all duration-300"
+                    hover:bg-[#D9D9D9] hover:text-[#9A1C1F] hover:stroke-[#9A1C1F] ease-in-out transition-all duration-300"
+                    onClick={handleDelete}
                   >
                     <svg
                       className="w-[35px] h-auto fill-none"

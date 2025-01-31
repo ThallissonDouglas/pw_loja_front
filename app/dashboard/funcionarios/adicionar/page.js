@@ -82,7 +82,7 @@ export default function AddFuncPage() {
                         className="bg-[#9A1C1F] text-white font-bold px-[20px] py-[5px] rounded-xl text-[20px]"
                         onClick={handleRedirect}
                     >
-                        Confirmar Alterações
+                        <p>Confirmar Alterações</p>
                     </button>
                 </form>
             </div>

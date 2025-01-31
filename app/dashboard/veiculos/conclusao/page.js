@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from 'next/image'
 import Navbar from "../../UI/Navbar";
 import Footer from "../../UI/Footer";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export default function ConclusaoPage() { /* TODO: Receber veiculo */
     const [usuario, setUsuario] = useState(null);

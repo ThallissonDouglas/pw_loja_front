@@ -23,8 +23,12 @@ export default function VeicList({ veiculos, usuario }) {
           />
         </div>
         {usuario === "gerente" && (
-          <button className="bg-[#9A1C1F] text-white font-bold px-[20px] py-[3px] rounded-xl text-[24px]">
-            Adicionar Veículo
+          <button 
+            className="bg-[#9A1C1F] text-white font-bold px-[20px] py-[3px] rounded-xl text-[24px]
+            hover:bg-[#D9D9D9] hover:text-[#9A1C1F] transition-all duration-300"
+            onClick={() => router.push('/dashboard/veiculos/adicionar')}
+          >
+            <p>Adicionar Veículo</p>
           </button>
         )}
       </div>

@@ -25,7 +25,7 @@ export default function HistList({ historico }) {
             </div>
 
             {/* Corpo da Lista */}
-            <main className="flex flex-col items-center justify-center space-y-[30px] w-[100%]">
+            <main className="flex flex-col-reverse items-center justify-center space-y-[30px] space-y-reverse w-[100%]">
                 {historico.length > 0 ? (
                     historico.map((historico) => (
                         <div

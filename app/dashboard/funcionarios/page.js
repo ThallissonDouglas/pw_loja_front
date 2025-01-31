@@ -52,6 +52,14 @@ export default function FuncionariosPage() {
         
         {/* Lista de Funcionários */}
         <FuncList funcionarios={funcionarios} />
+
+        <button 
+          className="w-[100%] bg-[#9A1C1F] text-white font-bold px-[10px] py-[9px] rounded-xl text-[27px] flex flex-row justify-center items-center space-x-4
+          hover:bg-[#D9D9D9] hover:text-[#9A1C1F] hover:stroke-[#9A1C1F] ease-in-out transition-all duration-300"
+          onClick={() => {router.push('/dashboard/funcionarios/adicionar')}}
+        >
+          <p>Adicionar Funcionário</p>
+        </button>
       </div>
       
 
