@@ -62,6 +62,11 @@ export default function CarroDetalhePage({ params }) {
               <button
                 className="bg-[#9A1C1F] text-white font-bold px-[10px] py-[9px] rounded-xl text-[27px] flex flex-row items-center space-x-4
                                 hover:bg-[#D9D9D9] hover:text-[#9A1C1F] hover:stroke-[#9A1C1F] ease-in-out transition-all duration-300"
+                onClick={() =>
+                  router.push(
+                    `/dashboard/veiculos/${params.chassiCarro}/editar`
+                  )
+                } // Adicionando onClick
               >
                 {/* Adicionar onClick pra edicao de dados */}
                 <svg className="w-[35px] h-auto fill-none" viewBox="0 0 26 26">
