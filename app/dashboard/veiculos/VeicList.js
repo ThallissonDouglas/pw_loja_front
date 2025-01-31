@@ -33,15 +33,15 @@ export default function VeicList({ veiculos, usuario }) {
         )}
       </div>
 
-      <main className="flex flex-col items-center justify-start space-y-[30px]">
+      <main className="flex flex-col items-center justify-start space-y-[30px] grow">
         {veiculos.length > 0 ? (
           veiculos.map((carro) => (
             <div
               key={carro.id}
-              className="flex flex-row items-center justify-start space-x-5 py-3 pr-4 bg-white rounded-xl hover:bg-[#F9F9F9] hover:cursor-pointer"
+              className="flex flex-row items-center justify-start w-[100%] space-x-5 py-3 pr-4 bg-white rounded-xl hover:bg-[#F9F9F9] hover:cursor-pointer"
               onClick={() => router.push(`/dashboard/veiculos/${carro.chassi}`)} // Redirecionamento
             >
-              <div className="overflow-hidden flex items-center justify-center">
+              <div className="overflow-hidden flex items-center justify-center max-w-[300px]">
                 <Image
                   src="/images/carro_template.png"
                   width={500}
@@ -49,40 +49,44 @@ export default function VeicList({ veiculos, usuario }) {
                   alt="Imagem do veículo"
                 />
               </div>
-              <div className="space-y-2">
+              <div className="space-y-2 grow">
                 <div className="font-bold text-[24px] items-start flex flex-row justify-between ">
                   <p>{carro.nome}</p>
                   <p>{carro.valor}</p>
                 </div>
                 <hr className="border-b-[2px] border-[#AFAFAF] " />
                 <div className="flex flex-wrap justify-normal text-[20px] *:py-2">
-                  <div className="w-[14em]">
-                    <p className="font-light">Ano/Modelo:</p>
-                    <p className="font-bold">{carro.ano_modelo}</p>
+                  <div className="flex justify-between items-center w-[100%]">
+                    <div className="grow">
+                      <p className="font-light">Ano/Modelo:</p>
+                      <p className="font-bold">{carro.ano_modelo}</p>
+                    </div>
+                    <div className="grow">
+                      <p className="font-light">N° do Chassi:</p>
+                      <p className="font-bold">{carro.chassi}</p>
+                    </div>
+                    <div className="grow">
+                      <p className="font-light">KM:</p>
+                      <p className="font-bold">{carro.km}</p>
+                    </div>
                   </div>
-                  <div className="w-[14em]">
-                    <p className="font-light">N° do Chassi:</p>
-                    <p className="font-bold">{carro.chassi}</p>
-                  </div>
-                  <div className="w-[14em]">
-                    <p className="font-light">KM:</p>
-                    <p className="font-bold">{carro.km}</p>
-                  </div>
-                  <div className="w-[10em]">
-                    <p className="font-light">Cor:</p>
-                    <p className="font-bold">{carro.cor}</p>
-                  </div>
-                  <div className="w-[10em]">
-                    <p className="font-light">Motor:</p>
-                    <p className="font-bold">{carro.motor}</p>
-                  </div>
-                  <div className="w-[10em]">
-                    <p className="font-light">Combustível:</p>
-                    <p className="font-bold">{carro.combustivel}</p>
-                  </div>
-                  <div className="w-[10em]">
-                    <p className="font-light">Câmbio:</p>
-                    <p className="font-bold">{carro.cambio}</p>
+                  <div className="flex justify-between items-center w-[100%]">
+                    <div className="grow">
+                      <p className="font-light">Cor:</p>
+                      <p className="font-bold">{carro.cor}</p>
+                    </div>
+                    <div className="grow">
+                      <p className="font-light">Motor:</p>
+                      <p className="font-bold">{carro.motor}</p>
+                    </div>
+                    <div className="grow">
+                      <p className="font-light">Combustível:</p>
+                      <p className="font-bold">{carro.combustivel}</p>
+                    </div>
+                    <div className="grow">
+                      <p className="font-light">Câmbio:</p>
+                      <p className="font-bold">{carro.cambio}</p>
+                    </div>
                   </div>
                 </div>
               </div>

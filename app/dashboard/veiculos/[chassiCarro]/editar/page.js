@@ -70,7 +70,7 @@ export default function EditarVeiculoPage({ params }) {
             <div className="w-[100%] flex flex-col items-start space-y-1">
               <p className="font-light text-center text-[20px]">Nome do Veículo</p>
               <input
-                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-[50%] h-[40px]" 
+                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-2/3 h-[40px]" 
                 type="text"
                 name="nome"
                 value={veiculo.nome}
@@ -81,7 +81,7 @@ export default function EditarVeiculoPage({ params }) {
             <div className="w-[100%] flex flex-col items-start space-y-1">
               <p className="font-light text-center text-[20px]">Preço(R$)</p>
               <input
-                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-[25%] h-[40px]" 
+                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-1/3 h-[40px]" 
                 type="text"
                 name="valor"
                 value={veiculo.valor}
@@ -92,7 +92,7 @@ export default function EditarVeiculoPage({ params }) {
             <div className="w-[100%] flex flex-col items-start space-y-1">
               <p className="font-light text-center text-[20px]">Nº do Chassi</p>
               <input
-                className="font-bold text-[20px] px-0 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-transparent w-[25%] h-[40px]" 
+                className="font-bold text-[20px] px-0 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-transparent w-1/3 h-[40px]" 
                 type="text"
                 name="chassi"
                 value={veiculo.chassi}
@@ -103,7 +103,7 @@ export default function EditarVeiculoPage({ params }) {
             <div className="w-[100%] flex flex-col items-start space-y-1">
               <p className="font-light text-center text-[20px]">Ano/Modelo</p>
               <input
-                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-[25%] h-[40px]" 
+                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-1/3 h-[40px]" 
                 type="text"
                 name="ano_modelo"
                 value={veiculo.ano_modelo}
@@ -114,7 +114,7 @@ export default function EditarVeiculoPage({ params }) {
             <div className="w-[100%] flex flex-col items-start space-y-1">
               <p className="font-light text-center text-[20px]">Kilometragem</p>
               <input
-                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-[25%] h-[40px]" 
+                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-1/3 h-[40px]" 
                 type="text"
                 name="km"
                 value={veiculo.km}
@@ -125,7 +125,7 @@ export default function EditarVeiculoPage({ params }) {
             <div className="w-[100%] flex flex-col items-start space-y-1">
               <p className="font-light text-center text-[20px]">Cor</p>
               <input
-                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-[25%] h-[40px]" 
+                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-1/3 h-[40px]" 
                 type="text"
                 name="cor"
                 value={veiculo.cor}
@@ -136,7 +136,7 @@ export default function EditarVeiculoPage({ params }) {
             <div className="w-[100%] flex flex-col items-start space-y-1">
               <p className="font-light text-center text-[20px]">Motor</p>
               <input
-                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-[25%] h-[40px]" 
+                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-1/3 h-[40px]" 
                 type="text"
                 name="motor"
                 value={veiculo.motor}
@@ -147,7 +147,7 @@ export default function EditarVeiculoPage({ params }) {
             <div className="w-[100%] flex flex-col items-start space-y-1">
               <p className="font-light text-center text-[20px]">Combustível</p>
               <input
-                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-[25%] h-[40px]" 
+                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-1/3 h-[40px]" 
                 type="text"
                 name="combustivel"
                 value={veiculo.combustivel}
@@ -158,7 +158,7 @@ export default function EditarVeiculoPage({ params }) {
             <div className="w-[100%] flex flex-col items-start space-y-1">
               <p className="font-light text-center text-[20px]">Câmbio</p>
               <input 
-                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-[25%] h-[40px]" 
+                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-1/3 h-[40px]" 
                 type="text"
                 name="cambio"
                 value={veiculo.cambio}

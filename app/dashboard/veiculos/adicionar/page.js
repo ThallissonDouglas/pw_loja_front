@@ -19,7 +19,7 @@ export default function AddVeiculoPage() {
     if (tipoUsuario !== "gerente") {
         router.push("/dashboard/veiculos"); // Redireciona quem não é gerente para a tela de veículos
     }
-  }, []); // Add unwrappedParams.chassiCarro as a dependency
+  }, [router]); // Add unwrappedParams.chassiCarro as a dependency
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -53,7 +53,7 @@ export default function AddVeiculoPage() {
         <div className="w-[100%] flex flex-col items-start space-y-1">
             <p className="font-light text-center text-[20px]">Nome do Veículo</p>
             <input
-                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-[50%] h-[40px]" 
+                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-2/3 h-[40px]" 
                 type="text"
                 name="nome"
                 onChange={handleInputChange}
@@ -63,7 +63,7 @@ export default function AddVeiculoPage() {
         <div className="w-[100%] flex flex-col items-start space-y-1">
             <p className="font-light text-center text-[20px]">Preço(R$)</p>
             <input
-                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-[25%] h-[40px]" 
+                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-1/3 h-[40px]" 
                 type="text"
                 name="valor"
                 onChange={handleInputChange}
@@ -73,7 +73,7 @@ export default function AddVeiculoPage() {
         <div className="w-[100%] flex flex-col items-start space-y-1">
             <p className="font-light text-center text-[20px]">Nº do Chassi</p>
             <input
-                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-[25%] h-[40px]" 
+                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-1/3 h-[40px]" 
                 type="text"
                 name="chassi"
                 onChange={handleInputChange}
@@ -83,7 +83,7 @@ export default function AddVeiculoPage() {
         <div className="w-[100%] flex flex-col items-start space-y-1">
             <p className="font-light text-center text-[20px]">Ano/Modelo</p>
             <input
-                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-[25%] h-[40px]" 
+                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-1/3 h-[40px]" 
                 type="text"
                 name="ano_modelo"
                 onChange={handleInputChange}
@@ -93,7 +93,7 @@ export default function AddVeiculoPage() {
         <div className="w-[100%] flex flex-col items-start space-y-1">
             <p className="font-light text-center text-[20px]">Kilometragem</p>
             <input
-                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-[25%] h-[40px]" 
+                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-1/3 h-[40px]" 
                 type="text"
                 name="km"
                 onChange={handleInputChange}
@@ -103,7 +103,7 @@ export default function AddVeiculoPage() {
         <div className="w-[100%] flex flex-col items-start space-y-1">
             <p className="font-light text-center text-[20px]">Cor</p>
             <input
-                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-[25%] h-[40px]" 
+                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-1/3 h-[40px]" 
                 type="text"
                 name="cor"
                 onChange={handleInputChange}
@@ -113,7 +113,7 @@ export default function AddVeiculoPage() {
         <div className="w-[100%] flex flex-col items-start space-y-1">
             <p className="font-light text-center text-[20px]">Motor</p>
             <input
-                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-[25%] h-[40px]" 
+                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-1/3 h-[40px]" 
                 type="text"
                 name="motor"
                 onChange={handleInputChange}
@@ -123,7 +123,7 @@ export default function AddVeiculoPage() {
         <div className="w-[100%] flex flex-col items-start space-y-1">
             <p className="font-light text-center text-[20px]">Combustível</p>
             <input
-                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-[25%] h-[40px]" 
+                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-1/3 h-[40px]" 
                 type="text"
                 name="combustivel"
                 onChange={handleInputChange}
@@ -133,7 +133,7 @@ export default function AddVeiculoPage() {
         <div className="w-[100%] flex flex-col items-start space-y-1">
             <p className="font-light text-center text-[20px]">Câmbio</p>
             <input 
-                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-[25%] h-[40px]" 
+                className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-1/3 h-[40px]" 
                 type="text"
                 name="cambio"
                 onChange={handleInputChange}

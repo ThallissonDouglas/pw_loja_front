@@ -40,7 +40,7 @@ export default function AddFuncPage() {
                     <div className="w-[100%] flex flex-col items-start space-y-1">
                         <p className="font-light text-center text-[20px]">Nome do Usuário:</p>
                         <input 
-                            className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-[50%] h-[40px]" 
+                            className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-2/3 h-[40px]" 
                             type="text"
                             placeholder={usuario === "gerente" ? "Nome do Gerente" : "Nome do Funcionário"}
                         />
@@ -48,23 +48,15 @@ export default function AddFuncPage() {
                     <div className="w-[100%] flex flex-col items-start space-y-1">
                         <p className="font-light text-center text-[20px]">Email:</p>
                         <input 
-                            className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-[50%] h-[40px]" 
-                            type="text"
+                            className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-1/2 h-[40px]" 
+                            type="email"
                             placeholder="Usuario@Email.com"
-                        />
-                    </div>
-                    <div className="w-[100%] flex flex-col items-start space-y-1">
-                        <p className="font-light text-center text-[20px]">Senha:</p>
-                        <input 
-                            className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-[50%] h-[40px]" 
-                            type="text"
-                            placeholder="Senha"
                         />
                     </div>
                     <div className="w-[100%] flex flex-col items-start space-y-1">
                         <p className="font-light text-center text-[20px]">CPF:</p>
                         <input 
-                            className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-[50%] h-[40px]" 
+                            className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-1/3 h-[40px]" 
                             type="text"
                             placeholder="000.000.000-00"
                         />
@@ -72,9 +64,25 @@ export default function AddFuncPage() {
                     <div className="w-[100%] flex flex-col items-start space-y-1">
                         <p className="font-light text-center text-[20px]">Função:</p>
                         <input 
-                            className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-[50%] h-[40px]" 
+                            className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-1/3 h-[40px]" 
                             type="text"
                             placeholder="Função do Funcionário"
+                        />
+                    </div>
+                    <div className="w-[100%] flex flex-col items-start space-y-1">
+                        <p className="font-light text-center text-[20px]">Senha:</p>
+                        <input 
+                            className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-1/3 h-[40px]" 
+                            type="password"
+                            placeholder="Senha"
+                        />
+                    </div>
+                    <div className="w-[100%] flex flex-col items-start space-y-1">
+                        <p className="font-light text-center text-[20px]">Senha:</p>
+                        <input 
+                            className="font-bold text-[20px] px-2 rounded-xl placeholder:font-bold placeholder-[#6A6A6A] border-[3px] border-[#6A6A6A] w-1/3 h-[40px]" 
+                            type="password"
+                            placeholder="Confirmar Senha"
                         />
                     </div>
                     <div className="h-[20px]"></div>
